@@ -11,7 +11,7 @@ export interface IEntity {
 interface IRepository<T> {
   create(entity: T): void;
   deleteById(id: string): void;
-  findById(id: string): T | undefined;
+  findById(id: string): T | null;
   findAll(): T[];
 }
 
@@ -32,7 +32,7 @@ class GenericRepository<T extends IEntity> implements IRepository<T> {
     this.entities.splice(entityId, 1);
   }
 
-  public findById(id: string): T | undefined {
+  public findById(id: string): T | null {
     const entity = this.entities.find((entity) => entity.id === id);
 
     if (!entity) {
