@@ -1,8 +1,6 @@
 /* Constructs a type consisting of all properties of Type set to required. The
  opposite of Partial.
 
- RequiredUser obliga a que todas las propiedades sean proporcionadas.
-
  Ejemplo en Entorno de Trabajo:
  Al recibir datos de una API externa donde algunos campos opcionales deben ser
 tratados como requeridos en tu aplicación.

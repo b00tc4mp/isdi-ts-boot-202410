@@ -17,7 +17,7 @@ type TaskResume = Pick<Task, "description" | "isCompleted">;
 
 const studyTypescript: TaskResume = {
   description: "Study Typescript",
-  isCompleted: true,
+  isCompleted: false,
 };
 
 console.log("studyTypescript :>> ", studyTypescript);
