@@ -28,4 +28,6 @@ Promise.all([
       price: 145,
     })
   )
+  .then(() => inMemoryProductService.getAllProduct().then(console.log))
+  .then(() => inMemoryProductService.deleteAllProducts())
   .then(() => inMemoryProductService.getAllProduct().then(console.log));

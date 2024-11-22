@@ -1,4 +1,4 @@
-import { IRepository } from "./types";
+import { IRepository, ItemWithoutId } from "./types";
 
 class InMemoryRepository<T extends { id: string }> implements IRepository<T> {
   private collection: T[] = [];
@@ -21,7 +21,7 @@ class InMemoryRepository<T extends { id: string }> implements IRepository<T> {
     this.collection.push(item);
   }
 
-  async update(itemId: string, item: Partial<Omit<T, "id">>): Promise<void> {
+  async update(itemId: string, item: Partial<ItemWithoutId<T>>): Promise<void> {
     const itemIndex = this.collection.findIndex(({ id }) => id === itemId);
 
     if (itemIndex < 0) {
@@ -39,6 +39,10 @@ class InMemoryRepository<T extends { id: string }> implements IRepository<T> {
     }
 
     this.collection.splice(itemIndex, 1);
+  }
+
+  async deleteAll(): Promise<void> {
+    this.collection = [];
   }
 }
 

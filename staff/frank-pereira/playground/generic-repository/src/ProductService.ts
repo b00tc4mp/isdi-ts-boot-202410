@@ -1,4 +1,4 @@
-import { IRepository, Product } from "./types";
+import { IRepository, ItemWithoutId, Product } from "./types";
 
 class ProductService {
   constructor(private repository: IRepository<Product>) {}
@@ -17,13 +17,17 @@ class ProductService {
 
   async updateProduct(
     productId: string,
-    item: Partial<Omit<Product, "id">>
+    item: Partial<ItemWithoutId<Product>>
   ): Promise<void> {
     return this.repository.update(productId, item);
   }
 
   async deleteProduct(productId: string): Promise<void> {
     return this.repository.delete(productId);
+  }
+
+  async deleteAllProducts(): Promise<void> {
+    return this.repository.deleteAll();
   }
 }
 
