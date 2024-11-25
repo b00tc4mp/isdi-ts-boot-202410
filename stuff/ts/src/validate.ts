@@ -1,4 +1,4 @@
-const validateHealthAmount = (amount: number) => {
+export default function validateHealthAmount(amount: number) {
   if (typeof amount !== "number") {
     throw new Error("Amount must be a number");
   }
@@ -6,10 +6,4 @@ const validateHealthAmount = (amount: number) => {
   if (amount <= 0 || amount > 10) {
     throw new Error("The amount cant be less tha one or greater than ten");
   }
-};
-
-function sayHello(name: string): void {
-  console.log(name);
 }
-
-export { validateHealthAmount, sayHello };

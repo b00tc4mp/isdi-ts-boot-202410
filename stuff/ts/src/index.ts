@@ -1,5 +1,3 @@
-import { sayHello } from "./validate.js";
-
 const sum = (a: number, b: number) => a + b;
 
 const result1 = sum(4, 2);
@@ -352,6 +350,7 @@ const getDeviceInfo = (device: Phone | Tablet): string | number => {
 };
 
 console.log(getDeviceInfo(phone));
+console.log(getDeviceInfo(tablet));
 
 //truthiness guards
 
@@ -456,5 +455,3 @@ sendNotificationMessage({
   phoneNumber: 4322345221,
   text: "Helppp",
 });
-
-sayHello("Jane");
