@@ -1,4 +1,4 @@
-import validateHealthAmount from "./validate";
+import { validateHealthAmount } from "./validate";
 
 type PlayerKind = "fighter" | "swordman" | "gunman";
 

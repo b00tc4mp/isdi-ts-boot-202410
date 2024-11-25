@@ -8,4 +8,8 @@ const validateHealthAmount = (amount: number) => {
   }
 };
 
-export default validateHealthAmount;
+function sayHello(name: string): void {
+  console.log(name);
+}
+
+export { validateHealthAmount, sayHello };

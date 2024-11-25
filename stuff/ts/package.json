@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "![Typescript logo](https://miro.medium.com/v2/resize:fit:1358/0*OJAUWZoGbVq--rNd.png)",
   "main": "index.js",
+  
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w"

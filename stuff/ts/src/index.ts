@@ -1,3 +1,5 @@
+import { sayHello } from "./validate.js";
+
 const sum = (a: number, b: number) => a + b;
 
 const result1 = sum(4, 2);
@@ -454,3 +456,5 @@ sendNotificationMessage({
   phoneNumber: 4322345221,
   text: "Helppp",
 });
+
+sayHello("Jane");
